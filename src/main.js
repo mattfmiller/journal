@@ -9,8 +9,10 @@ $(function(){
     var journalEntry = new Entry(userTitleInput, userBodyInput);
 
     var userWordCount = journalEntry.countWords();
+    var userVowelCount = journalEntry.countVowels();
 
     $('#show-word-count').text(userWordCount);
+    $('#show-word-count').append("<p>" + userVowelCount + "</p>");
     event.preventDefault();
   });
 });
