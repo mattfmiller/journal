@@ -10,9 +10,11 @@ $(function(){
 
     var userWordCount = journalEntry.countWords();
     var userVowelCount = journalEntry.countVowels();
+    var userConsCount = journalEntry.countCons();
 
     $('#show-word-count').text(userWordCount);
     $('#show-word-count').append("<p>" + userVowelCount + "</p>");
+    $('#show-word-count').append("<p>" + userConsCount + "</p>");
     event.preventDefault();
   });
 });

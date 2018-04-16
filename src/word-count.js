@@ -20,3 +20,15 @@ Entry.prototype.countVowels = function () {
   console.log(vowelCount);
   return vowelCount;
 };
+
+Entry.prototype.countCons = function () {
+  var arrayOfRawCons = this.body.match(/[bcdfghjklmnpqrstvwxyz]/gi);
+  var consCount = 0;
+  for (var i = 0; i < arrayOfRawCons.length; i++) {
+    var arrayOfCutCons = arrayOfRawCons[i].split("");
+    for (var j = 0; j < arrayOfCutCons.length; j++) {
+      consCount++;
+    }
+  }
+  return consCount;
+};
