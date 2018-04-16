@@ -11,10 +11,13 @@ $(function(){
     var userWordCount = journalEntry.countWords();
     var userVowelCount = journalEntry.countVowels();
     var userConsCount = journalEntry.countCons();
+    var userFirstSentence = journalEntry.getFirstSentence();
 
-    $('#show-word-count').text(userWordCount);
+    $('#show-word-count').text('');
+    $('#show-word-count').append("<p>" + userWordCount + "</p>");
     $('#show-word-count').append("<p>" + userVowelCount + "</p>");
     $('#show-word-count').append("<p>" + userConsCount + "</p>");
+    $('#show-word-count').append("<p>" + userFirstSentence + ".</p>");
     event.preventDefault();
   });
 });

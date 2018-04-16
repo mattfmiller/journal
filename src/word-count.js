@@ -32,3 +32,8 @@ Entry.prototype.countCons = function () {
   }
   return consCount;
 };
+
+Entry.prototype.getFirstSentence = function () {
+  var arrayOfSentences = this.body.split('. ');
+  return arrayOfSentences[0];
+};
